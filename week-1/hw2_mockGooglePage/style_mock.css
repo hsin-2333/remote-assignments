@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+html{
+    font-size: 62.5%; /* 16px*0.625= 10px, -> 1rem = 10px */
+}
+
 a{
     color: #1967D2;
     text-decoration: none;
@@ -31,7 +35,7 @@ a:hover{
 
 .hero h2{
     font-family: "Roboto";
-    font-size: 72px;
+    font-size: 7.2rem;
     letter-spacing: 82;
     font-weight: 500;
     color: #202124;
@@ -44,13 +48,12 @@ p{
 
 .title-large {
     font-family: 'Roboto', sans-serif;
-
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
 }
 
 .nav-tabs{
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 20px;
     padding-left: 32px;
@@ -58,26 +61,26 @@ p{
 
 
 .title-medium {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     letter-spacing: 0.15px;
 }
 
 .title-small, .label-large {
-    font-size: 14px;
-    line-height: 32px;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
     letter-spacing: 0.1px;
 }
 
 .label-medium {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     letter-spacing: 0.5px;
 }
 
 .label-small {
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
     letter-spacing: 0.5px;
 }
 
@@ -154,7 +157,7 @@ header {
     color: #ffffff;
     border-radius: 100px;
     line-height: 36px;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .recommend-content{
@@ -189,7 +192,7 @@ header {
     display: flex;
     align-items: center;
     /* gap: 8px; */
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 36px;
     font-weight: 400;
 }
@@ -284,7 +287,7 @@ header {
 
 .landing-row-inner-header h2{
     display: flex;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 500;
 }
 
