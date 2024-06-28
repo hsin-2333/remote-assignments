@@ -115,8 +115,16 @@ body {
     /*grid-template-rows: 1fr 1fr;*/
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin: 16px 0px;
     height: 40vh;
+}
+
+.hidden-content{
+    display: none;
+}
+
+.hidden-content-show{
+    display: grid;
 }
 
 .box-item {

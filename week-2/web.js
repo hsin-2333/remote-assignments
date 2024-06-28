@@ -13,13 +13,17 @@ function toggleMenu(){
         const sideMenu = document.querySelector(".sideMenu");
         const ham = document.querySelector(".hamburger");
         sideMenu.classList.toggle("sideMenuOpen");
-        ham.classList.toggle("hamburgerOpen");
-        
+        ham.classList.toggle("hamburgerOpen");      
     }
     else{
     }
 }
 
-// const mediaQuery = window.matchMedia("(min-width: 500px)");
 
-// mediaQuery.addEventListener("onclick", toggleMenu);
+function showMore(){
+    const showMore = document.querySelector(".hidden-content");
+    showMore.classList.toggle("hidden-content-show");
+    // alert("Show more!");
+    // 使用alert時，chrome會跳出-> [Violation] 'click' handler took 1346ms
+    // 原因: event handler執行時間過長，會導致UI無法即時回應
+}
