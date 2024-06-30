@@ -9,7 +9,7 @@ function calculate(data) {
 	let discount = data.discount;
 	let total_product_num = data.products.length;
 
-	for (let i=0; i<total_product_num; i++){
+	for (let i = 0; i < total_product_num; i++){
 		totalPrice += data.products[i].price * discount;
 		// console.log(totalPrice,'totalPrice'); 
 	}
