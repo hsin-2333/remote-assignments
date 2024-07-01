@@ -143,11 +143,9 @@ button {
     cursor: pointer;
 }
 
-@media screen and (min-width: 500px) and (max-width: 800px) {
-    .hamburger{
-        display: block;
-    }
-    .sideMenuOpen{
+/* request: 500px <= layout < 800px*/
+@media screen and (min-width: 500px) and (max-width: 799px) { 
+    .hamburger, .sideMenuOpen{
         display: block;
     }
 
@@ -156,9 +154,19 @@ button {
     }
 }
 
+/* request: layout <=500px*/
 @media screen and (max-width:500px){
     .box-content {
         grid-template-columns: 1fr;
+    }
+
+    /*remain hamburger when layout <500px*/
+    .hamburger, .sideMenuOpen{
+        display: block;
+    }
+
+    .menu ul li:not(.hamburger) {
+        display: none;
     }
 }
 
