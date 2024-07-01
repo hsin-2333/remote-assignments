@@ -11,6 +11,8 @@ function twoSum(nums, target) {
 		//console.log(gap,'= gap');
 		if (nums.includes(gap)){ 
 			result.push(i);
+			result.push(nums.indexOf(gap)); //找到gap後，將自己的索引值丟進result，避免重複循環
+			break;
 			// console.log(result, "result")
 			// console.log(result.indexOf(gap), "索引");
 			//indexOf() 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
