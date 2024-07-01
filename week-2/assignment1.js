@@ -7,14 +7,14 @@
 
 function max(numbers) {
 	// your code here
-    let order_data = numbers[0];
+    let orderData = numbers[0];
 
     for (let i=1; i<numbers.length; i++){
-        if (numbers[i]>order_data){
-            order_data = numbers[i];
+        if (numbers[i]>orderData){
+            orderData = numbers[i];
         }
     }
-    return(order_data);
+    return(orderData);
 }
 
 
