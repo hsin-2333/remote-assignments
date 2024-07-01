@@ -154,8 +154,8 @@ button {
     }
 }
 
-/* request: layout <=500px*/
-@media screen and (max-width:500px){
+/* request: layout < 500px*/
+@media screen and (max-width:499px){
     .box-content {
         grid-template-columns: 1fr;
     }
