@@ -10,13 +10,13 @@ function calculate(data) {
 	let total_product_num = data.products.length;
 
 	for (let i = 0; i < total_product_num; i++){
-		totalPrice += data.products[i].price * discount;
+		totalPrice += data.products[i].price * (1-discount);
 		// console.log(totalPrice,'totalPrice'); 
 	}
 	return totalPrice;
 }
 const discountedPrice = calculate({
-	discount: 0.1,
+	discount: 0.1, //打九折
 	products: [
 		{
 			name: "Product 1",
