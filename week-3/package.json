@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hsin-2333/remote-assignments/tree/master#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "express": "^4.19.2"
   }
 }
