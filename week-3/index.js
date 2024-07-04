@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
 //Check cookies for the user's name in the backend
 app.get('/myName',(req, res)=>{
     if (Object.keys(req.cookies).length === 0){
-        // res.send(Object.keys(req.cookies));
         res.send('No cookie')
     }
     else{
