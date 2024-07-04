@@ -2,7 +2,6 @@ const express = require('express')
 const app = express();
 const port = 3000;
 const cookieParser = require('cookie-parser'); 
-const { use } = require('react');
 
 app.use(cookieParser());
 
