@@ -29,17 +29,19 @@ body {
     width: 32px;
     height: 20px;
     display: none; 
-    position: relative;
+    /* position: relative; */ /* ensure bars stay fixed when open sidemenu*/ 
     z-index: 100;
 }
 
 
 .hamburgerOpen .bar1{
     transform: translate(0,8px) rotate(-45deg);
+    position: fixed;
 }
 
 .hamburgerOpen .bar3{
-    transform: translate(0,-8px) rotate(45deg);
+    transform: translate(0,0px) rotate(45deg);
+    position: fixed;
 }
 
 .hamburgerOpen .bar2{
