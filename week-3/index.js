@@ -16,6 +16,7 @@ app.get("/myName", (req, res) => {
   } else {
     res.send(Object.keys(req.cookies));
     console.log("有cookie", Object.keys(req.cookies));
+    console.log("git test");
   }
   // console.log('test',req.cookies);
   // res.send('Check your console'+`${Object.keys(userCookie)}`);
