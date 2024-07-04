@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    title HW5: HTTP Cookie
+  body
+
+    h1 HTTP Cookie 
+    if name 
+      h2 Welcome, #{name}🎉!
+    else
+      form(action='/trackName', method="get")
+        label Please enter your name
+        <br><br> 
+          input(type='text', name="name", placeholder="Enter your name")
+        <br><br>
+        button(type="submit", name="username") submit

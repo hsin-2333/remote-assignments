@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const cookieParser = require("cookie-parser");
+app.set("view engine", "pug");
 
 app.use(cookieParser());
 
@@ -12,13 +13,11 @@ app.get("/", (req, res) => {
 //Check cookies for the user's name in the backend
 app.get("/myName", (req, res) => {
   if (Object.keys(req.cookies).length === 0) {
-    res.send("No cookie");
+    res.render("input");
   } else {
-    res.send(Object.keys(req.cookies));
-    console.log("有cookie", Object.keys(req.cookies));
+    res.render("input", { name: Object.keys(req.cookies) });
+    console.log("有 Cookie, ", Object.keys(req.cookies));
   }
-  // console.log('test',req.cookies);
-  // res.send('Check your console'+`${Object.keys(userCookie)}`);
 });
 
 //Save the user's input in the cookie
@@ -26,8 +25,7 @@ app.get("/trackName", (req, res) => {
   //將input存入cookie
   if (req.query.name) {
     res.cookie(req.query.name);
-    // res.send('Yeah🎉🎉 Welcome Here, '+ `${Object.keys(req.cookies)}`);
-    res.redirect("/myName.html");
+    res.redirect("/myName");
   } else {
     res.send("Lack of Parameter");
   }
@@ -38,7 +36,6 @@ app.get("/getData", (req, res) => {
     res.send("Lack of Parameter");
   } else {
     const number = Number(req.query.number);
-    // const number = parseInt(req.query.number,10);
     console.log(number);
     if (isNaN(number)) {
       res.send("Wrong Parameter");
