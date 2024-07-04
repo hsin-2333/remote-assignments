@@ -37,7 +37,7 @@ app.get("/getData", (req, res) => {
   if (!req.query.number) {
     res.send("Lack of Parameter");
   } else {
-    const number = Number(req.query.number, 10);
+    const number = Number(req.query.number);
     // const number = parseInt(req.query.number,10);
     console.log(number);
     if (isNaN(number)) {
