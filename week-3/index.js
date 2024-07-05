@@ -15,8 +15,8 @@ app.get("/myName", (req, res) => {
   if (Object.keys(req.cookies).length === 0) {
     res.render("input");
   } else {
-    res.render("input", { name: Object.keys(req.cookies) });
-    console.log("有 Cookie, ", Object.keys(req.cookies));
+    res.render("input", { name: req.cookies.inputName });
+    console.log("有 Cookie, ", req.cookies.inputName);
   }
 });
 
@@ -24,7 +24,7 @@ app.get("/myName", (req, res) => {
 app.get("/trackName", (req, res) => {
   //將input存入cookie
   if (req.query.name) {
-    res.cookie(req.query.name);
+    res.cookie("inputName",req.query.name);
     res.redirect("/myName");
   } else {
     res.send("Lack of Parameter");
