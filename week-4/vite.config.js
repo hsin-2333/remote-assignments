@@ -16,10 +16,5 @@ export default defineConfig({
     }
   },
   plugins: [react()],
-<<<<<<< HEAD
   base: '/remote-assignments/week-4/' // 確保這裡的 repository-name 是你的 GitHub 倉庫名稱
 })
-=======
-  base: '/remote-assignments/week-4/'
-})
->>>>>>> gh-page
