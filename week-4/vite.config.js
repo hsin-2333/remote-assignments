@@ -1,15 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'; 
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: 'index.html',
-        assignment3: 'assignment3/index3.html',
-        assignment4: 'assignment4/index4.html',
-        assignment5: 'assignment5/index5.html',
+        main: path.resolve(__dirname, "index.html"),
+        assignment3: path.resolve(__dirname, "assignment3/index3.html"),
+        assignment4: path.resolve(__dirname, "assignment4/index4.html"),
+        assignment5: path.resolve(__dirname, "assignment5/index5.html"),
       }
     }
   },
