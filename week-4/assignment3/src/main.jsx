@@ -91,11 +91,16 @@ const Content = () => {
       {item}
     </div>
   ));
+  
+  const [isShow, setIsShow] = useState(false);
+  const showMore = () => setIsShow(!isShow);
+
   return (
     <div className="content">
       <h2>Section Title</h2>
       <div className="box-content">{boxContents}</div>
-      <button>Call to Action</button>
+      <button onClick={showMore}>Call to Action</button>
+      <div className={isShow ?"box-content":"hidden-content" }>{boxContents}</div>
     </div>
   );
 };
