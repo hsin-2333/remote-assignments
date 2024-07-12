@@ -43,27 +43,27 @@ const List = () => {
       .catch((error) => console.error(error));
   }, [askCount]);
 
-  const repoList =
-    repoData.length > 0
-      ? repoData.map((item) => (
-          <li className="listContainer" key={item.id}>
-            <div className="box box-row">
-              <span className="title">{item.name}</span>
-              <Visibility visibility={item.visibility} />
-            </div>
-            <div className="box">
-              <span>{item.description}</span>
-              <TopicTags topics={item.topics} />
-            </div>
-          </li>
-        ))
-      : null;
+  const repoList = repoData.map((item) => (
+    <li className="listContainer" key={item.id}>
+      <div className="box box-row">
+        <span className="title">{item.name}</span>
+        <Visibility visibility={item.visibility} />
+      </div>
+      <div className="box">
+        <span>{item.description}</span>
+        <TopicTags topics={item.topics} />
+      </div>
+    </li>
+  ));
 
   return (
     <div className="apiContent">
       <span>{repoList}</span>
       <div className="loadMore">
-        <button className="loadBtn" onClick={() => setAskCount((askCount) => askCount + 1)}>
+        <button
+          className="loadBtn"
+          onClick={() => setAskCount((askCount) => askCount + 1)}
+        >
           More
         </button>
       </div>
