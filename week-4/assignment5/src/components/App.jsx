@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import Counter from "./Counter";
 
 const App = () => {
-  const [counts, setCounts] = useState([
-    { id: 1, sum: 0 },
-    { id: 2, sum: 0 },
-    { id: 3, sum: 0 },
-  ]);
+  const initialCounts = Array.from({length:3},(_,index) => ({id: index + 1, sum: 0}));
+  const [counts, setCounts] = useState(initialCounts);
 
   const [nextCounterId, setNextCounterId] = useState(4);
 
