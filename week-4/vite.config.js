@@ -16,5 +16,5 @@ export default defineConfig({
     }
   },
   plugins: [react()],
-  base: '/remote-assignments/week-4/' // 確保這裡的 repository-name 是你的 GitHub 倉庫名稱
+  base: '/reactHW/' // 確保這裡的 repository-name 是你的 GitHub 倉庫名稱
 })
