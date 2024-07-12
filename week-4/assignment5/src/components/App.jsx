@@ -51,7 +51,7 @@ const App = () => {
       {counts.map((count) => (
         <Counter
           id={count.id}
-          key={count.id.toString() ? count.id.toString() : count.id}
+          key={count.id}
           sum={count.sum}
           changeCount={handleCountChange}
         />
