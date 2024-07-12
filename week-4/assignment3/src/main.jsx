@@ -45,10 +45,10 @@ const SideMenu = ({ menuOpen }) => {
 };
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(menuOpen ? 0 : 1);
+    setMenuOpen(!menuOpen);
   };
 
   return (
